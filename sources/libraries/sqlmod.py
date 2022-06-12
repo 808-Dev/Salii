@@ -21,7 +21,7 @@ from libraries.styling import *
 import mysql.connector
 import json
 def SQLConnect():
-    DatabaseCredentials = mysql.connector.connect(host='10.0.0.19',user='salii',password='pufpoLM10$!',database='salii')
+    DatabaseCredentials = mysql.connector.connect(host='saliibot.808-dev.com',user='saliicontributer',password='Sal11bot!',database='salii')
     return(DatabaseCredentials.cursor(),DatabaseCredentials)
 def SQLPost(template,data,connection):
     SQLAutheticatedSession = connection[0]
