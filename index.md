@@ -1,37 +1,88 @@
-## Welcome to GitHub Pages
+# Salii
 
-You can use the [editor on GitHub](https://github.com/808-Dev/Salii/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Social Media Archival Utility
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<br>
 
-### Markdown
+<h1>Installation and Use</h1>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+To run Salii on your own system, you are going to need to run a Linux or Unix distribution with Python 3 and Dialog installed.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+Just run this in your terminal and you should be fine.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+`sudo apt update -y && sudo apt install python3 python3-pip dialog -y && pip3 install configparser tweepy wget mysql-connector-python pythondialog colorama`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/808-Dev/Salii/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+When you run the service for the first time, you will be required to fill out an automatically generated form. You can ignore the MYSQL section of
+
+the setup dialog for now since this project is meant to report to a central database, but you can change those variables by navigating to `libraries/sqlmod.py`
+
+and replacing the low access keys provided with your own.
+
+
+
+<h1>Custom Utilization</h1>
+
+
+
+For custom instances of this bot, you will probably want to change some stuff. The list below will have data related to what you may want to change:
+
+
+
+<h2>Tags</h3>
+
+
+
+When you want to change what the bot looks for, you will want to change the tags. These tags can be found in the `main.py` file for now.
+
+
+
+NOTE: If you are using existing API tags which where used for Salii, you will want to remove them by adding these lines of code after line 
+
+line 120.
+
+
+
+`for RemovedTag in ["@saliibot", "#saliibot", "#Saliibot", "@Saliibot"]:
+
+    stream.DeleteRule(RemovedTag)
+
+ exit()`
+
+ 
+
+After the program quits, you should be able to remove those lines and restart it like normal.
+
+ 
+
+<h2>Databases</h2>
+
+ 
+
+Salii uses MYSQL since it runs as a web accessible archive. I ain't about to get into setting up MYSQL for linux so I'm gonna let you 
+
+look that up on YouTube. Here's the general structure of what you will want so that Salii works right.
+
+ 
+
+Database: 
+
+ 
+
+salii
+
+ 
+
+Table: 
+
+ 
+
+listingcache
+
