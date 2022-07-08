@@ -33,27 +33,9 @@ After the program quits, you should be able to remove those lines and restart it
 <h2>Databases</h2>
  
 Salii uses MYSQL since it runs as a web accessible archive. I ain't about to get into setting up MYSQL for linux so I'm gonna let you 
-look that up on YouTube. Here's the general structure of what you will want so that Salii works right.
- 
-Database: 
- 
-salii
- 
-Table: 
- 
-listingcache
- 
-Columns: 
- 
-ListingId  -  set as an automatically incrementing integer
- 
-ListingName  -  set as a text value
- 
-ListingContent  -  set as a text value
+look that up on YouTube. Here's the SQL file for it though.
 
-ListingDate  -  set as a text value
-
-ListingMeta  -  set as a text value
+<a href="https://github.com/808-Dev/Salii/blob/main/salii.sql">Download Template File Here</a>
 
 <h2>To Do:</h2>
 
