@@ -1,7 +1,5 @@
 <img src="github_logo.png"></img>
 <br>
-Social Media Archival Utility
-<br>
 <h1>Installation and Use</h1>
 
 To run Salii on your own system, you are going to need to run a Linux or Unix distribution with Python 3 and Dialog installed.
