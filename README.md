@@ -1,5 +1,4 @@
 <img src="github_logo.png"></img>
-# Salii
 Social Media Archival Utility
 <br>
 <h1>Installation and Use</h1>
