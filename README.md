@@ -1,3 +1,4 @@
+<img src="github_logo.png">
 # Salii
 Social Media Archival Utility
 <br>
